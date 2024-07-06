@@ -156,7 +156,7 @@ def main():
             test_env,
             args=args,
             hparams=hparams,
-            n_steps=n_steps,
+            n_steps=15003,
             checkpoint_freq=checkpoint_freq,
             logger=logger,
             writer=writer,
