@@ -1,0 +1,9 @@
+[37m[36mINFO[0m[0m 06/27 07:26:36 | Command :: train_all.py exp_name --dataset PACS --data_dir /content/drive/MyDrive/code/miro/my/datasets/path --algorithm HYPERNET
+Environment:
+	Python: 3.10.12
+	PyTorch: 2.3.0+cu121
+	Torchvision: 0.18.0+cu121
+	CUDA: 12.1
+	CUDNN: 8906
+	NumPy: 1.25.2
+	PIL: 9.4.0

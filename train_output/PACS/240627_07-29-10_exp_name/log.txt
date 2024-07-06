@@ -1,0 +1,66 @@
+[37m[36mINFO[0m[0m 06/27 07:29:11 | Command :: train_all.py exp_name --dataset PACS --data_dir /content/drive/MyDrive/code/miro/my/datasets/path --algorithm HYPERNET
+Environment:
+	Python: 3.10.12
+	PyTorch: 2.3.0+cu121
+	Torchvision: 0.18.0+cu121
+	CUDA: 12.1
+	CUDNN: 8906
+	NumPy: 1.25.2
+	PIL: 9.4.0
+Args:
+	algorithm: HYPERNET
+	checkpoint_freq: None
+	configs: []
+	data_dir: /content/drive/MyDrive/code/miro/my/datasets/path
+	dataset: PACS
+	debug: False
+	deterministic: True
+	evalmode: fast
+	holdout_fraction: 0.2
+	model_save: None
+	name: exp_name
+	out_dir: train_output/PACS/240627_07-29-10_exp_name
+	out_root: train_output/PACS
+	prebuild_loader: False
+	seed: 0
+	show: False
+	steps: None
+	tb_freq: 10
+	test_envs: None
+	trial_seed: 0
+	unique_name: 240627_07-29-10_exp_name
+	work_dir: .
+HParams:
+	data_augmentation: True
+	val_augment: False
+	resnet18: False
+	resnet_dropout: 0.0
+	class_balanced: False
+	optimizer: adam
+	freeze_bn: True
+	pretrained: True
+	lr: 5e-05
+	batch_size: 32
+	weight_decay: 0.0
+	swad: False
+	swad_kwargs: 
+	  n_converge: 3
+	  n_tolerance: 6
+	  tolerance_ratio: 0.3
+	test_batchsize: 128
+	model: resnet50
+	feat_layers: stem_block
+	ld: 0.1
+	lr_mult: 10.0
+Dataset:
+	[PACS] #envs=4, #classes=7
+	env0: art_painting (#2048)
+	env1: cartoon (#2344)
+	env2: photo (#1670)
+	env3: sketch (#3929)
+
+[37m[36mINFO[0m[0m 06/27 07:29:26 | n_steps = 5001
+[37m[36mINFO[0m[0m 06/27 07:29:26 | checkpoint_freq = 200
+[37m[36mINFO[0m[0m 06/27 07:29:26 | n_steps is updated to 5001 => 5001 for checkpointing
+[37m[36mINFO[0m[0m 06/27 07:29:26 | Target test envs = [[0], [1], [2], [3]]
+[37m[36mINFO[0m[0m 06/27 07:29:26 | 

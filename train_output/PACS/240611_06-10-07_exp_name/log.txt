@@ -1,0 +1,84 @@
+[37m[36mINFO[0m[0m 06/11 06:10:07 | Command :: train_all.py exp_name --dataset PACS --data_dir /content/drive/MyDrive/code/miro/my/datasets/path --algorithm MIRO
+Environment:
+	Python: 3.10.12
+	PyTorch: 2.3.0+cu121
+	Torchvision: 0.18.0+cu121
+	CUDA: 12.1
+	CUDNN: 8906
+	NumPy: 1.25.2
+	PIL: 9.4.0
+Args:
+	algorithm: MIRO
+	checkpoint_freq: None
+	configs: []
+	data_dir: /content/drive/MyDrive/code/miro/my/datasets/path
+	dataset: PACS
+	debug: False
+	deterministic: True
+	evalmode: fast
+	holdout_fraction: 0.2
+	model_save: None
+	name: exp_name
+	out_dir: train_output/PACS/240611_06-10-07_exp_name
+	out_root: train_output/PACS
+	prebuild_loader: False
+	seed: 0
+	show: False
+	steps: None
+	tb_freq: 10
+	test_envs: None
+	trial_seed: 0
+	unique_name: 240611_06-10-07_exp_name
+	work_dir: .
+HParams:
+	data_augmentation: True
+	val_augment: False
+	resnet18: False
+	resnet_dropout: 0.0
+	class_balanced: False
+	optimizer: adam
+	freeze_bn: True
+	pretrained: True
+	lr: 5e-05
+	batch_size: 32
+	weight_decay: 0.0
+	swad: False
+	swad_kwargs: 
+	  n_converge: 3
+	  n_tolerance: 6
+	  tolerance_ratio: 0.3
+	test_batchsize: 128
+	model: resnet50
+	feat_layers: stem_block
+	ld: 0.1
+	lr_mult: 10.0
+Dataset:
+	[PACS] #envs=4, #classes=7
+	env0: art_painting (#2048)
+	env1: cartoon (#2344)
+	env2: photo (#1670)
+	env3: sketch (#3929)
+
+[37m[36mINFO[0m[0m 06/11 06:10:07 | n_steps = 5001
+[37m[36mINFO[0m[0m 06/11 06:10:07 | checkpoint_freq = 200
+[37m[36mINFO[0m[0m 06/11 06:10:07 | n_steps is updated to 5001 => 5001 for checkpointing
+[37m[36mINFO[0m[0m 06/11 06:10:07 | Target test envs = [[0], [1], [2], [3]]
+[37m[36mINFO[0m[0m 06/11 06:10:07 | 
+[37m[36mINFO[0m[0m 06/11 06:10:07 | Testenv name escaping te_art_painting -> te_art_painting
+[37m[36mINFO[0m[0m 06/11 06:10:07 | Test envs = [0], name = te_art_painting
+[37m[36mINFO[0m[0m 06/11 06:10:07 | Batch sizes for each domain: [0, 32, 32, 32] (total=96)
+[37m[36mINFO[0m[0m 06/11 06:10:07 | steps-per-epoch for each domain: 58.62, 41.75, 98.25 -> min = 41.75
+[37m[36mINFO[0m[0m 06/11 06:10:10 | # of params = 47034311
+[37m[36mINFO[0m[0m 06/11 06:17:24 | test_in     test_out    train_in    train_out   tr_outloss  env0_in     env0_out    env1_out    env2_out    env3_out    step        epoch       loss        reg_loss    step_time   eval_time  
+[37m[36mINFO[0m[0m 06/11 06:17:24 | 0.231849    0.251834    0.000000    0.325402    1.813053    0.231849    0.251834    0.247863    0.485030    0.243312    0           0.000000    1.406261    -5.756459   13.041510   420.328381 
+[37m[36mINFO[0m[0m 06/11 06:23:20 | 0.790116    0.797066    0.000000    0.955546    0.143988    0.790116    0.797066    0.942308    0.988024    0.936306    200         4.790419    -0.079042   -3.837759   1.599528    36.299843  
+[37m[36mINFO[0m[0m 06/11 06:28:19 | 0.795607    0.826406    0.000000    0.958948    0.129647    0.795607    0.826406    0.955128    0.979042    0.942675    400         9.580838    -0.365385   -4.481567   1.319288    35.088984  
+[37m[36mINFO[0m[0m 06/11 06:33:22 | 0.871873    0.889976    0.000000    0.971611    0.099499    0.871873    0.889976    0.972222    0.991018    0.951592    600         14.371257   -0.438646   -4.882359   1.328882    37.852528  
+[37m[36mINFO[0m[0m 06/11 06:38:25 | 0.859671    0.872861    0.000000    0.970460    0.097051    0.859671    0.872861    0.963675    0.991018    0.956688    800         19.161677   -0.479408   -5.189633   1.329275    36.380150  
+[37m[36mINFO[0m[0m 06/11 06:43:25 | 0.803539    0.806846    0.000000    0.969901    0.104979    0.803539    0.806846    0.970085    0.988024    0.951592    1000        23.952096   -0.521136   -5.488287   1.323723    35.796555  
+[37m[36mINFO[0m[0m 06/11 06:48:27 | 0.810250    0.836186    0.000000    0.963504    0.105655    0.810250    0.836186    0.957265    0.988024    0.945223    1200        28.742515   -0.555072   -5.761111   1.328960    35.772398  
+[37m[36mINFO[0m[0m 06/11 06:53:29 | 0.837096    0.855746    0.000000    0.968325    0.102212    0.837096    0.855746    0.961538    0.988024    0.955414    1400        33.532934   -0.579348   -6.004318   1.333311    34.982180  
+[37m[36mINFO[0m[0m 06/11 06:58:32 | 0.852349    0.863081    0.000000    0.968065    0.099125    0.852349    0.863081    0.972222    0.988024    0.943949    1600        38.323353   -0.598404   -6.186364   1.331750    37.588877  
+[37m[36mINFO[0m[0m 06/11 07:03:34 | 0.823673    0.833741    0.000000    0.971029    0.097940    0.823673    0.833741    0.978632    0.979042    0.955414    1800        43.113772   -0.623304   -6.406562   1.330791    35.421852  
+[37m[36mINFO[0m[0m 06/11 07:08:38 | 0.830384    0.855746    0.000000    0.974448    0.099662    0.830384    0.855746    0.978632    0.988024    0.956688    2000        47.904192   -0.653974   -6.665717   1.328215    38.304535  
+[37m[36mINFO[0m[0m 06/11 07:13:41 | 0.837096    0.867971    0.000000    0.955416    0.157224    0.837096    0.867971    0.961538    0.976048    0.928662    2200        52.694611   -0.672874   -6.880931   1.326085    37.958065  
