@@ -29,7 +29,7 @@ def _hparams(algorithm, dataset, random_state):
         else:
             hparams["batch_size"] = (16, int(2 ** random_state.uniform(3, 5.5)))
         if algorithm == "ARM":
-            hparams["batch_size"] = (16, 8)
+            hparams["batch_size"] = (8, 8)
     else:
         hparams["lr"] = (1e-3, 10 ** random_state.uniform(-4.5, -2.5))
         hparams["batch_size"] = (16, int(2 ** random_state.uniform(3, 9)))
